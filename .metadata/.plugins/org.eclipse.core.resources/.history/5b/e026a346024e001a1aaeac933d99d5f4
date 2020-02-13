@@ -1,0 +1,19 @@
+package br.com.fiap.teste;
+
+import br.com.fiap.bean.ContaCorrente;
+import br.com.fiap.bean.ContaPoupanca;
+
+public class Execicio {
+
+	public static void main(String[] args) {
+		// Instaciar uma cc e uma cp
+		
+		ContaCorrente cc = new ContaCorrente();
+		
+		ContaPoupanca cp = new ContaPoupanca();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package br.com.fiap.bean;
+
+public class ContaCorrente extends Conta {
+	
+	private TipoConta tipo;
+
+	
+
+	@Override
+	public void depositar(double valor) {
+		saldo += valor; //saldo + saldo = valor;
+		
+	}
+
+	@Override
+	public void retirar(double valor) throws exception {
+		if(tipo == TipoConta.COMUM && saldo < valor) {
+			throw new Exception ("saldo insuficiente");
+		}
+		
+	}
+	
+	public TipoConta getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoConta tipo) {
+		this.tipo = tipo;
+	}
+	
+
+}

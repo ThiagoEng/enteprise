@@ -1,0 +1,31 @@
+package br.com.fiap.bean;
+
+public class ContaPoupanca extends Conta implements ContaIvenimento{
+
+	private float taxa;
+	
+	//Constante
+	public static final float RENDIMENTO = 0.0035f;
+	
+	@Override
+	public double calculaRetornoIvestimento() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void depositar(double valor) {
+		saldo += valor;
+		
+	}
+
+	@Override
+	public void retirar(double valor) throws Exception {
+		if(saldo < valor) {
+			throw new Exception("Saldo insuficiente");
+		}
+		
+	}
+
+	
+}
